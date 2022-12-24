@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/signup.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    // check if logged in
+    if (localStorage.getItem('user')) {
+      window.location.href = '/';
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="center">
+    <h1>SignUp</h1>
+    <p id="error" style="color: red; margin-left: 10px;"></p>
+    <form method="" id="sign-up" enctype="multipart/form-data">
+      <div class="txt_field">
+        <input type="text" name="name" id="name" required>
+        <span></span>
+        <label for="name"> Name</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="email" name="email" id="email" required>
+        <span></span>
+        <label for="email">E-mail</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" name="password" id="password" required>
+        <span></span>
+        <label for="password">Password</label>
+      </div>
+      <div class="txt_field">
+        <select name="role" id="role">
+          <option value="B">Buyer</option>
+          <option value="S">Seller</option>
+        </select>
+        <span></span>
+        <label for="role">Role</label>
+      </div>
+      <div class="txt_field">
+        <input type="file" name="image" id="image" required>
+        <span></span>
+        <!-- <label for="image">Profile Picture</label> -->
+      </div>
+      <input class="save" type="submit">
+      <p class="para-2">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+
+
+  <script src="js/signup.js"></script>
+</body>
+
+</html>
