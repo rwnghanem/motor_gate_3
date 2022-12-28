@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sale</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/sale.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    // check if logged in
+    if (JSON.parse(localStorage.getItem('user')).role == "B") {
+      window.location.href = '/cars.html';
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- start header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/Motor Gate-03.png" alt="logo">
+      </a>
+      <nav>
+        <i class="fas fa-bars toggle-menu"></i>
+        <ul>
+          <li id="homeLink"><a href="/">Home</a></li>
+          <li id="addLink"><a href="sale.html" class="active">Add Car</a></li>
+          <li id="carsLink"><a href="/cars.html">cars</a></li>
+          <li id="signupLink"><a href="signup.html">Sign Up</a></li>
+          <li id="loginLink"><a href="login.html">log In </a></li>
+        </ul>
+        <!--  -->
+        <img id="profileLink" src="images/user.png" class="user-pic" onclick="toggleMenu()">
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div id="user-info" class="user-info">
+              <!-- menu comes from javascript -->
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link" id="logout">
+              <img src="images/WhatsApp Image 2022-11-19 at 4.14.17 PM.jpeg">
+              <p>logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end Header  -->
+  <!-- start sale -->
+  <div class="sale">
+    <div class="container">
+      <form id="add-car">
+
+        <h2 class="regform">Enter Your Car Information</h2>
+        <p id="error" style="color: red; margin-left: 10px; background-color: bisque;"></p>
+        <div>
+          <label for="name">Name</label>
+          <input class="kilo" type="text" name="name" id="name" placeholder="Enter the name of your car">
+        </div>
+        <div>
+          <label for="model">Model</label>
+          <input class="kilo" type="number" name="model" id="model" placeholder="Enter the model of your car">
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input class="kilo" type="price" name="price" id="price" placeholder="Enter the price of your car">
+        </div>
+
+        <div>
+          <label for="status">Status</label>
+          <select name="status" id="status" class="kilo" required>
+            <option value="sell">Sell</option>
+            <option value="rent">Rent</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Description</label>
+          <textarea class="main-input" type="text" name="description" id="description"
+            placeholder="Enter the description of your car"></textarea>
+
+        </div>
+
+        <label for="picture_image" data-role="button">upload img</label>
+        <input class=" kilo" type="file" name="image" id="image">
+
+
+        <input class="save" type="submit" value="save">
+      </form>
+    </div>
+  </div>
+  <!-- end sale -->
+  <script src="js/sale.js"></script>
+</body>
+
+</html>

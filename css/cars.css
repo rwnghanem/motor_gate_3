@@ -16,9 +16,8 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: url(../images/pexels-ryan-west-1719648.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: #818181;
+  height: 2200px;
 }
 ul {
   list-style: none;
@@ -275,7 +274,7 @@ header nav .form i {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #525252;
+  color: blanchedalmond;
   margin: 12px 0;
 }
 
@@ -305,208 +304,128 @@ header nav .form i {
   float: right;
   margin: 10px 18.2% 0 0;
 }
-.sale .container {
+.audi .container {
   padding-top: 100px;
   padding-bottom: 100px;
+  color: aquamarine;
 }
-form {
-  border: 1px solid #ccc;
+.cars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.audi .container a {
+  all: unset;
+}
+.car {
+  width: 30%;
+  padding: 15px !important;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid red;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.car img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.car img:hover {
+  transform: scale(1.1);
+}
+.car h2 {
+  font-size: 30px;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+.car h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.car p {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.car .st {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.car .st span {
+  display: block;
+  background-color: darkgray;
+  border-radius: 10px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+}
+.car .st .sell {
+  background-color: yellowgreen;
+}
+.car .st .rent {
+  background-color: royalblue;
+}
+
+.form {
+  border: 1px solid red;
   padding-left: 30px;
-  height: 760px;
+  height: 600px;
   background-color: rgb(0, 0, 0, 0.4);
   border-radius: 15px 15px 15px 15px;
+  transition: all 0.4s ease;
 }
-form h2 {
+.form:hover {
+  transform: scale(1.1);
+}
+.form h2 {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
 }
-form label {
-  font-size: 20px;
-  line-height: 50px;
+.form img {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px 15px 15px 15px;
 }
-form select {
-  width: 200px;
-  height: 35px;
-}
-.container .car {
+
+.oma {
   position: relative;
-  left: 50px;
-  line-height: 40px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-  margin-left: 65px;
+  bottom: -50px;
+  padding-bottom: -50px;
 }
-.container .color,
-.con {
+
+.mah {
+  border: 1px solid red;
+  padding-left: 30px;
+  height: 600px;
+  background-color: rgb(0, 0, 0, 0.4);
+  border-radius: 15px 15px 15px 15px;
   position: relative;
-  left: 74px;
-  line-height: 40px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
+  bottom: -100px;
 }
-.container .city {
-  position: relative;
-  left: 167px;
-  line-height: 40px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .price {
-  position: relative;
-  left: 122px;
-  line-height: 35px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .kilo {
-  position: relative;
-  left: 37px;
-  line-height: 35px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .trans {
-  position: relative;
-  left: 80px;
-  line-height: 40px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .foul {
-  position: relative;
-  left: 165px;
-  line-height: 40px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .phone {
-  position: relative;
-  left: 145px;
-  line-height: 34px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-label {
-  color: #d2d79f;
-}
-.container .main-input {
-  position: relative;
-  left: 50px;
-  line-height: 34px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  bottom: -20px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .file {
-  position: relative;
-  left: 145px;
-  line-height: 34px;
-  width: 280px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 16px;
-  color: #90b77d;
-  background-color: #06283d;
-}
-.container .save {
-  position: relative;
-  right: 300px;
-  line-height: 34px;
-  width: 130px;
-  border-radius: 6px;
-  padding: 0 22px;
-  font-size: 25px;
-  bottom: -140px;
-  color: #90b77d;
-  background-color: #001e6c;
-  cursor: pointer;
-}
-.comment {
-  padding-bottom: 20px;
-}
-.browse {
-  background-color: #06283d;
-}
-.drag-area {
-  border: 2px dashed #fff;
-  height: 150px;
-  width: 1100px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.drag-area.active {
-  border: 2px solid #fff;
-}
-.drag-area .icon {
-  font-size: 100px;
+.form-p {
   color: white;
-  padding-top: 60px;
+  float: left;
+  padding-right: 100px;
+  padding-top: 5%;
 }
-.drag-area header {
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
+.form-m {
+  color: white;
+  float: left;
+  padding-right: 100px;
+  padding-top: 5%;
 }
-.drag-area span {
-  font-size: 25px;
-  font-weight: 500;
-  color: #fff;
-  margin: 10px 0 15px 0;
-}
-.drag-area button {
-  padding: 10px 25px;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  background: #fff;
-  color: #5256ad;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.drag-area img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+.form-h {
+  color: white;
+  float: left;
+  padding-right: 100px;
+  padding-top: 5%;
 }

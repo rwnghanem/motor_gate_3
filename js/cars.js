@@ -3,25 +3,6 @@ function toggleMenu() {
   subMenu.classList.toggle('open-menu');
 }
 
-let span = document.querySelector('.up');
-
-window.onscroll = function () {
-  if (this.scrollY >= 800) {
-    span.classList.add('show');
-  } else {
-    span.classList.remove('show');
-  }
-};
-
-span.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-};
-//
-console.log(location);
-
 const addLink = document.getElementById('addLink');
 const carsLink = document.getElementById('carsLink');
 const signupLink = document.getElementById('signupLink');
@@ -56,3 +37,45 @@ logout.addEventListener('click', () => {
   localStorage.removeItem('user');
   window.location.href = '/';
 });
+
+//
+{
+  /*  */
+}
+
+//
+const container = document.querySelector('.cars');
+let cars = [];
+
+fetch('http://127.0.0.1:8000/api/cars')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log('data: ', data);
+    let inned = ``;
+    data.forEach((car) => {
+      inned += `
+        <div class="car">
+            <div class="image-box">
+                <img src="http://127.0.0.1:8000/storage/uploads/${
+                  car.image
+                }" alt="">
+            </div>
+            <div class="details-box">
+                <h2>${car.name}</h2>
+                <h3>${car.model}</h3>
+                <p>${car.description}</p>
+                <div class="st">
+                    <span class="${car.status == 'sell' ? 'sell' : 'rent'}">
+                        ${car.status}
+                    </span>         
+                    <span>${car.author}</span>
+                </div>
+                         
+                
+            </div>
+
+        </div>
+        `;
+      container.innerHTML = inned;
+    });
+  });
